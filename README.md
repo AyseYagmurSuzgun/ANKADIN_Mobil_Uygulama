@@ -1,35 +1,216 @@
-# ANKADIN - Kişisel Güvenlik ve Acil Durum Uygulaması
+# 📱 ANKADIN – Kişisel Güvenlik ve Acil Durum Uygulaması
 
-ANKADIN, kullanıcıların kendilerini tehlikede hissettikleri anlarda, önceden belirledikleri acil durum kişilerine tek bir tuşla konumlarını ve yardım mesajlarını SMS ile göndermelerini sağlayan bir mobil uygulamadır.
+ANKADIN, kullanıcıların kendilerini tehlikede hissettikleri anlarda tek bir tuşla önceden belirledikleri acil durum kişilerine konum ve yardım mesajı gönderebildikleri, aynı zamanda kritik sağlık bilgilerini güvenli şekilde saklayabildikleri bir Android mobil uygulamasıdır.
 
-Uygulama, sadece bir yardım butonu olmanın ötesinde, kullanıcıların kritik sağlık bilgilerini (kan grubu, alerjiler, hastalıklar vb.) saklamalarına olanak tanıyarak olası bir müdahale durumunda ilk yardım ekiplerine hayati bilgiler sunar.
+Uygulama; konum servisleri, video kaydı, harita entegrasyonu, yerel ve bulut veritabanı desteği ile kapsamlı bir kişisel güvenlik çözümü sunmayı amaçlamaktadır.
 
-## ✨ Temel Özellikler
+---
 
-- **🚨 Tek Tuşla SOS:** Ana ekrandaki büyük SOS butonu ile acil durum mesajını ve anlık konumu saniyeler içinde gönderin.
-- **👥 Acil Durum Kişileri Yönetimi:** Güvendiğiniz kişileri listenize ekleyin, düzenleyin veya silin. SOS mesajı bu kişilere gönderilir.
-- **❤️ Detaylı Sağlık Profili:** Kan grubu, alerjiler, kullanılan ilaçlar, kronik hastalıklar gibi hayati önem taşıyan bilgileri profilinize kaydedin.
-- **🔐 Firebase ile Güvenli Giriş:** Kullanıcı hesapları Firebase Authentication ile güvenli bir şekilde yönetilir.
-- **☁️ Bulut Veri Saklama:** Kullanıcı verileri (profil, acil durum kişileri vb.) Firebase Firestore üzerinde saklanır.
-- **📱 Çevrimdışı Destek:** Kritik sağlık profili bilgileri Room veritabanı sayesinde çevrimdışı durumlarda bile erişilebilirdir.
-- **🗺️ Konum Servisleri:** Google Maps entegrasyonu ile anlık konumunuzu harita üzerinde görüntüleyin.
-- **🌙 Koyu Mod Desteği:** Cihaz ayarlarına duyarlı, göz yormayan modern bir koyu tema arayüzü.
+# 🚀 Uygulama Akışı
 
-## 🛠️ Teknoloji Mimarisi ve Kütüphaneler
+## 1️⃣ Splash Screen
+- Uygulama açıldığında logo ve geri sayım (sayaç) içeren bir splash ekranı gösterilir.
+- Sayaç tamamlandıktan sonra kullanıcı giriş ekranına yönlendirilir.
 
-- **Dil:** %100 [Kotlin](https://kotlinlang.org/)
-- **Mimari:** MVVM (Model-View-ViewModel) - Fragment tabanlı UI yapısı
-- **Asenkron Programlama:** Coroutines
-- **UI:**
-    - Android Views & XML
-    - [Material Components](https://material.io/develop/android): Modern ve tutarlı bir tasarım dili için.
-- **Veritabanı:**
-    - **Yerel:** [Room Persistence Library](https://developer.android.com/training/data-storage/room) - Kullanıcı sağlık profili gibi kritik verileri çevrimdışı erişim için cihazda saklar.
-    - **Uzak:** [Firebase Firestore](https://firebase.google.com/docs/firestore) - Kullanıcı, acil durum kişileri ve diğer verileri bulutta saklamak için.
-- **Kimlik Doğrulama:** [Firebase Authentication](https://firebase.google.com/docs/auth)
-- **Harita & Konum:**
-    - [Google Maps SDK](https://developers.google.com/maps/documentation/android-sdk)
-    - [Google Play Services Location](https://developers.google.com/android/reference/com/google/android/gms/location/package-summary)
+---
+
+## 2️⃣ Kimlik Doğrulama
+
+### 🔐 Giriş Yap
+- Firebase Authentication ile kullanıcı doğrulaması yapılır.
+
+### 📝 Kayıt Ol
+Kullanıcıdan:
+- İsim
+- Geçerli formatta Gmail adresi
+- Güçlü şifre (minimum güvenlik kriterleri)
+
+istenir.
+
+Geçersiz e-posta veya zayıf şifre durumunda kayıt işlemi engellenir.
+
+Kullanılan servisler:
+- Firebase Authentication
+- Firebase Firestore
+
+---
+
+## 3️⃣ Ana Ekran – Bottom Navigation (4 Fragment)
+
+Uygulama giriş sonrası 4 ana bölümden oluşur:
+
+---
+
+## 🆘 1. Ana Sayfa (SOS Ekranı)
+
+- Büyük bir **Acil Yardım Butonu**
+- Manuel konum bilgisi gösterimi
+
+### SOS Butonuna Basıldığında:
+
+- (Ayar tercihe bağlı olarak) video kaydı başlatılır
+- Kayıtlı acil durum kişilerine SMS ile yardım mesajı gönderilir
+- Harita ekranına yönlendirme yapılır
+- En yakın hastane veya karakola yol tarifi alınabilir
+
+---
+
+## 👤 2. Profil Sayfası
+
+Kullanıcı kişisel ve sağlık bilgilerini girer.
+
+### Kişisel Bilgiler
+- İsim
+- TC
+- Telefon
+- Yaş
+- Cinsiyet
+- Doğum Tarihi (Takvim seçimi)
+
+### Sağlık Bilgileri
+- Kan grubu (Liste seçimi)
+- Alerjiler
+- Kullanılan ilaçlar
+- Kronik hastalıklar
+
+Veriler:
+- Room Database ile yerel olarak saklanır
+- Firebase Firestore ile bulutta tutulur
+
+---
+
+## 👥 3. Acil Durum Kişileri
+
+- En fazla 3 kişi eklenebilir
+- Galeriden fotoğraf seçilebilir (izin kontrolü yapılır)
+- İsim ve telefon bilgisi girilir
+- RecyclerView ile listelenir
+
+Bir kişiye tıklandığında:
+- Güncelleme
+- Silme
+- Gönderilecek acil durum mesajını görüntüleme
+
+---
+
+## 🗺 4. Harita Sayfası
+
+- Kullanıcının manuel konumu marker ile gösterilir
+- Butonlarla:
+  - En yakın hastane
+  - En yakın karakol
+
+harita üzerinde ayrı ayrı gösterilir.
+
+Marker’a tıklandığında:
+- Google Maps uygulaması açılır
+- Mevcut konumdan yol tarifi alınır
+
+---
+
+# ⚙️ Options Menu (3 Nokta Menü)
+
+### 📄 Hakkında
+Uygulama hakkında bilgilendirme sayfası.
+
+### ⚙️ Ayarlar
+- Acil durum mesajını düzenleme
+- SOS butonunda video kaydı aç/kapat
+- Bildirimleri aç/kapat
+- Koyu mod desteği
+- Destek (mail uygulamasına yönlendirme)
+
+### 🚪 Çıkış
+- Firebase oturumu kapatılır
+- Kullanıcı giriş ekranına yönlendirilir
+
+---
+
+# 🛠 Kullanılan Teknolojiler ve Konular
+
+- Kotlin
+- MVVM Mimarisi
+- Fragment tabanlı yapı
+- ViewBinding
+- Firebase Authentication
+- Firebase Firestore
+- Room Database
+- Google Maps SDK
+- Google Play Services Location
+- RecyclerView
+- ListView
+- SharedPreferences
+- Intent Kullanımı
+- Runtime Permission Yönetimi
+- Coroutines
+- Splash Screen & Sayaç
+- Options Menu
+
+---
+
+# 🧠 Mimari Yaklaşım
+
+- MVVM mimari yapısı
+- Yerel + Bulut veri yönetimi
+- Kullanıcı tercihleri için SharedPreferences
+- Modüler ve okunabilir kod yapısı
+
+---
+
+# 📸 Uygulama Görselleri
+
+Aşağıya uygulama ekran görüntülerini ekleyebilirsiniz:
+
+- Splash Screen
+  <img width="429" height="961" alt="Ekran görüntüsü 2026-02-11 134711" src="https://github.com/user-attachments/assets/59ae9af3-fdd7-4592-a341-f65169bad4ac" />
+
+- Login & Register
+  <img width="432" height="961" alt="Ekran görüntüsü 2026-02-11 134742" src="https://github.com/user-attachments/assets/b6959b48-6725-4365-8e71-02892a392581" />
+  <img width="431" height="960" alt="Ekran görüntüsü 2026-02-11 134817" src="https://github.com/user-attachments/assets/869c943e-0fe1-4fa4-8570-3c3e6a526ead" />
+
+- Ana Sayfa (SOS)
+  <img width="433" height="962" alt="Ekran görüntüsü 2026-02-11 134917" src="https://github.com/user-attachments/assets/6b584b48-9070-4d00-bf6e-e7dfdd6fead2" />
+  <img width="433" height="960" alt="Ekran görüntüsü 2026-02-11 135251" src="https://github.com/user-attachments/assets/a96ddc50-024b-417d-9981-ff0660f17c20" />
+
+- Profil Sayfası
+  <img width="430" height="964" alt="Ekran görüntüsü 2026-02-11 134953" src="https://github.com/user-attachments/assets/2deaeaf3-dd5a-4d88-9412-7370aebd0c65" />
+  <img width="432" height="961" alt="Ekran görüntüsü 2026-02-11 135009" src="https://github.com/user-attachments/assets/504ab284-8c5a-46c9-8215-7402633413ef" />
+
+- Acil Durum Kişileri
+  <img width="431" height="963" alt="Ekran görüntüsü 2026-02-11 135025" src="https://github.com/user-attachments/assets/85c97528-a83b-4201-8120-fbce98cdc5f7" />
+
+- Harita
+  <img width="432" height="962" alt="Ekran görüntüsü 2026-02-11 135044" src="https://github.com/user-attachments/assets/f5f6b425-94f1-4e13-9a29-9d769892a4b6" />
+  <img width="431" height="964" alt="Ekran görüntüsü 2026-02-11 135114" src="https://github.com/user-attachments/assets/88380744-7f55-4105-afc7-e3aa17bc641e" />
+  <img width="432" height="963" alt="Ekran görüntüsü 2026-02-11 135225" src="https://github.com/user-attachments/assets/f10a4557-0e6d-4bb4-85ae-651cb7e400ff" />
+
+- Hakkında
+  <img width="433" height="964" alt="Ekran görüntüsü 2026-02-11 135303" src="https://github.com/user-attachments/assets/0fcb574d-d1ec-43db-b9da-721ad8240946" />
+
+- Ayarlar
+  <img width="433" height="958" alt="Ekran görüntüsü 2026-02-11 135318" src="https://github.com/user-attachments/assets/20641caa-7818-4abe-a29a-001fb55bd1de" />
+
+
+---
+
+# 🔮 Geliştirilebilir Alanlar
+
+- Canlı konum takibi
+- Otomatik konum algılama
+- Gerçek zamanlı konum paylaşımı
+- Push Notification sistemi
+- Acil durum geçmişi kaydı
+- Wear OS entegrasyonu
+
+---
+
+# 📌 Bilinen Sınırlamalar
+
+- Konum manuel girilmektedir
+- Canlı konum takibi bulunmamaktadır
+- Video kaydı arka planda sürekli çalışmamaktadır
+ 
+---
 
 ## 🚀 Kurulum ve Başlangıç
 
@@ -37,7 +218,7 @@ Projeyi yerel makinenizde çalıştırmak için aşağıdaki adımları izleyin.
 
 ### Gereksinimler
 
-- Android Studio (Iguana veya üstü tavsiye edilir)
+- Android Studio 
 - JDK 17
 
 ### Adımlar
@@ -65,20 +246,19 @@ Projeyi yerel makinenizde çalıştırmak için aşağıdaki adımları izleyin.
       ```xml
       <meta-data
           android:name="com.google.android.geo.API_KEY"
-          android:value="BURAYA_KENDİ_API_ANAHTARINIZI_YAPIŞTIRIN" />
+          android:value="YOUR_GOOGLE_API_KEY" />
       ```
 
 5.  **Uygulamayı Çalıştırın:**
     Tüm adımları tamamladıktan sonra uygulamayı bir emülatörde veya fiziksel bir cihazda çalıştırabilirsiniz.
 
-## 📝 Gelecek Planları ve İyileştirmeler
+---
 
-- [ ] Yakındaki hastane, eczane ve karakolları haritada gösterme.
-- [ ] Farklı acil durum senaryoları için (yangın, deprem vb.) özelleştirilmiş mesaj şablonları.
-- [ ] Panik anında yanlış basımları önlemek için SOS butonuna basılı tutma veya kaydırma özelliği.
-- [ ] Giyilebilir cihazlar (Wear OS) için bir tamamlayıcı uygulama.
-- [ ] Çevrimdışı harita desteği.
+# 👩‍💻 Geliştirici
+
+Ayşe Yağmur Süzgün  
 
 ## 📜 Lisans
 
 Bu proje [MIT Lisansı](https://opensource.org/licenses/MIT) altında lisanslanmıştır.
+
