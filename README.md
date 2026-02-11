@@ -1,4 +1,4 @@
-# 📱 ANKADIN – Kişisel Güvenlik ve Acil Durum Uygulaması
+# 📱 ANKADIN – Acil Yardım Uygulaması
 
 ANKADIN, kullanıcıların kendilerini tehlikede hissettikleri anlarda tek bir tuşla önceden belirledikleri acil durum kişilerine konum ve yardım mesajı gönderebildikleri, aynı zamanda kritik sağlık bilgilerini güvenli şekilde saklayabildikleri bir Android mobil uygulamasıdır.
 
@@ -288,5 +288,6 @@ Ayşe Yağmur Süzgün
 ## 📜 Lisans
 
 Bu proje [MIT Lisansı](https://opensource.org/licenses/MIT) altında lisanslanmıştır.
+
 
 
