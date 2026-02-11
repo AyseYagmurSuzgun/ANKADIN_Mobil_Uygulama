@@ -48,7 +48,7 @@ Uygulama giriş sonrası 4 ana bölümden oluşur:
 
 ### SOS Butonuna Basıldığında:
 
-- (Ayar tercihe bağlı olarak) video kaydı başlatılır
+- (Tercihe bağlı olarak) video kaydı başlatılır
 - Kayıtlı acil durum kişilerine SMS ile yardım mesajı gönderilir
 - Harita ekranına yönlendirme yapılır
 - En yakın hastane veya karakola yol tarifi alınabilir
@@ -288,6 +288,7 @@ Ayşe Yağmur Süzgün
 ## 📜 Lisans
 
 Bu proje [MIT Lisansı](https://opensource.org/licenses/MIT) altında lisanslanmıştır.
+
 
 
 
