@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 1. Sayfa: ACİL (Ana Sayfa) -->
+    <item
+        android:id="@+id/nav_emergency"
+        android:title="Acil Yardım"
+        android:icon="@android:drawable/ic_menu_call" />
+
+    <!-- 2. Sayfa: PROFİL (Sağlık ve Kişisel Bilgiler) -->
+    <item
+        android:id="@+id/nav_profile"
+        android:title="Profilim"
+        android:icon="@android:drawable/ic_menu_my_calendar" />
+
+    <!-- 3. Sayfa: KİŞİLER (Acil Durum Kişileri) -->
+    <item
+        android:id="@+id/nav_contacts"
+        android:title="Kişiler"
+        android:icon="@android:drawable/ic_menu_myplaces" />
+
+    <!-- 4. Sayfa: HARİTA -->
+    <item
+        android:id="@+id/nav_map"
+        android:title="Harita"
+        android:icon="@android:drawable/ic_dialog_map" />
+
+</menu>

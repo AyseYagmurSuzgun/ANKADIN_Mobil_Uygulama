@@ -1,0 +1,5 @@
+<resources>
+    <!-- ... diğer stringler ... -->
+    <string name="app_name">ANKADIN</string>
+    <string name="default_sos_message">ACİL DURUM! Yardıma ihtiyacım var. Lütfen bu konuma gelin.</string>
+</resources>

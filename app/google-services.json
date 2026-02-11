@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1014346638666",
+    "project_id": "ankadin-4fd53",
+    "storage_bucket": "ankadin-4fd53.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1014346638666:android:8b3ebef2f2371d2ea04db3",
+        "android_client_info": {
+          "package_name": "com.example.ankadin"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAp1oaZv7T2-nPtl5YEfH_4BEt43mdBrQI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
