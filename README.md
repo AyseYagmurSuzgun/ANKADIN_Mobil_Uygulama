@@ -159,37 +159,64 @@ Uygulama hakkında bilgilendirme sayfası.
 
 # 📸 Uygulama Görselleri
 
-Aşağıya uygulama ekran görüntülerini ekleyebilirsiniz:
+## 🟣 Splash Screen
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/59ae9af3-fdd7-4592-a341-f65169bad4ac" width="250"/>
+</p>
 
-- Splash Screen
-  <img width="429" height="961" alt="Ekran görüntüsü 2026-02-11 134711" src="https://github.com/user-attachments/assets/59ae9af3-fdd7-4592-a341-f65169bad4ac" />
+---
 
-- Login & Register
-  <img width="432" height="961" alt="Ekran görüntüsü 2026-02-11 134742" src="https://github.com/user-attachments/assets/b6959b48-6725-4365-8e71-02892a392581" />
-  <img width="431" height="960" alt="Ekran görüntüsü 2026-02-11 134817" src="https://github.com/user-attachments/assets/869c943e-0fe1-4fa4-8570-3c3e6a526ead" />
+## 🔐 Login & Register
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/b6959b48-6725-4365-8e71-02892a392581" width="250"/>
+  <img src="https://github.com/user-attachments/assets/869c943e-0fe1-4fa4-8570-3c3e6a526ead" width="250"/>
+</p>
 
-- Ana Sayfa (SOS)
-  <img width="433" height="962" alt="Ekran görüntüsü 2026-02-11 134917" src="https://github.com/user-attachments/assets/6b584b48-9070-4d00-bf6e-e7dfdd6fead2" />
-  <img width="433" height="960" alt="Ekran görüntüsü 2026-02-11 135251" src="https://github.com/user-attachments/assets/a96ddc50-024b-417d-9981-ff0660f17c20" />
+---
 
-- Profil Sayfası
-  <img width="430" height="964" alt="Ekran görüntüsü 2026-02-11 134953" src="https://github.com/user-attachments/assets/2deaeaf3-dd5a-4d88-9412-7370aebd0c65" />
-  <img width="432" height="961" alt="Ekran görüntüsü 2026-02-11 135009" src="https://github.com/user-attachments/assets/504ab284-8c5a-46c9-8215-7402633413ef" />
+## 🆘 Ana Sayfa (SOS)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/6b584b48-9070-4d00-bf6e-e7dfdd6fead2" width="250"/>
+  <img src="https://github.com/user-attachments/assets/a96ddc50-024b-417d-9981-ff0660f17c20" width="250"/>
+</p>
 
-- Acil Durum Kişileri
-  <img width="431" height="963" alt="Ekran görüntüsü 2026-02-11 135025" src="https://github.com/user-attachments/assets/85c97528-a83b-4201-8120-fbce98cdc5f7" />
+---
 
-- Harita
-  <img width="432" height="962" alt="Ekran görüntüsü 2026-02-11 135044" src="https://github.com/user-attachments/assets/f5f6b425-94f1-4e13-9a29-9d769892a4b6" />
-  <img width="431" height="964" alt="Ekran görüntüsü 2026-02-11 135114" src="https://github.com/user-attachments/assets/88380744-7f55-4105-afc7-e3aa17bc641e" />
-  <img width="432" height="963" alt="Ekran görüntüsü 2026-02-11 135225" src="https://github.com/user-attachments/assets/f10a4557-0e6d-4bb4-85ae-651cb7e400ff" />
+## 👤 Profil
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/2deaeaf3-dd5a-4d88-9412-7370aebd0c65" width="250"/>
+  <img src="https://github.com/user-attachments/assets/504ab284-8c5a-46c9-8215-7402633413ef" width="250"/>
+</p>
 
-- Hakkında
-  <img width="433" height="964" alt="Ekran görüntüsü 2026-02-11 135303" src="https://github.com/user-attachments/assets/0fcb574d-d1ec-43db-b9da-721ad8240946" />
+---
 
-- Ayarlar
-  <img width="433" height="958" alt="Ekran görüntüsü 2026-02-11 135318" src="https://github.com/user-attachments/assets/20641caa-7818-4abe-a29a-001fb55bd1de" />
+## 👥 Acil Durum Kişileri
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/85c97528-a83b-4201-8120-fbce98cdc5f7" width="250"/>
+</p>
 
+---
+
+## 🗺 Harita
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/f5f6b425-94f1-4e13-9a29-9d769892a4b6" width="250"/>
+  <img src="https://github.com/user-attachments/assets/88380744-7f55-4105-afc7-e3aa17bc641e" width="250"/>
+  <img src="https://github.com/user-attachments/assets/f10a4557-0e6d-4bb4-85ae-651cb7e400ff" width="250"/>
+</p>
+
+---
+
+## ℹ️ Hakkında
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/0fcb574d-d1ec-43db-b9da-721ad8240946" width="250"/>
+</p>
+
+---
+
+## ⚙️ Ayarlar
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/20641caa-7818-4abe-a29a-001fb55bd1de" width="250"/>
+</p>
 
 ---
 
@@ -261,4 +288,5 @@ Ayşe Yağmur Süzgün
 ## 📜 Lisans
 
 Bu proje [MIT Lisansı](https://opensource.org/licenses/MIT) altında lisanslanmıştır.
+
 
